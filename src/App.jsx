@@ -3,6 +3,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 import Auth from "./Auth"
 import { getTranslation, translations } from "./translations"
 import "./App.css"
+import Snowfall from "react-snowfall"
 
 const App = () => {
 	const [user, setUser] = useState(null)
@@ -449,6 +450,17 @@ const App = () => {
 	if (!currentBoard) {
 		return (
 			<div className="app">
+				{/* Фон со снегом */}
+				<Snowfall
+					snowflakeCount={150}
+					style={{
+						position: "fixed",
+						width: "100vw",
+						height: "100vh",
+						zIndex: 9999,
+						pointerEvents: "none",
+					}}
+				/>
 				<header className="header">
 					<div className="header-content">
 						<div className="header-top">
@@ -493,6 +505,17 @@ const App = () => {
 
 	return (
 		<div className="app">
+			{/* Фон со снегом */}
+			<Snowfall
+				snowflakeCount={150}
+				style={{
+					position: "fixed",
+					width: "100vw",
+					height: "100vh",
+					zIndex: 9999,
+					pointerEvents: "none",
+				}}
+			/>
 			<header className="header">
 				<div className="header-content">
 					<div className="header-top">
